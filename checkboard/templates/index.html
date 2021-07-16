@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/CSS/style.css') }}">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 1200px;
+            height: 500px;
+            background-color: whitesmoke;
+        }
+        .main_body,
+        .header{
+            display: flex;
+            justify-content: center;
+        }
+        .header h1{
+            margin: 100px 0px 0px;
+            color: red;
+        }
+        .box{
+            background-color: red;
+            width: 5%;
+            height: 50px;
+            border-radius: 10px;
+            border: 1px solid black;
+            margin: 20px 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Hello World</h1>
+    <div class="container">
+        
+        <div class="header">
+            <h1>Welcome</h1>
+        </div>
+
+        <div class="main_body">
+
+            <div class="box"></div>
+            
+        </div>
+
+    </div>
+</body>
+</html>
