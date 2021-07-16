@@ -27,7 +27,7 @@
             color: red;
         }
         .box{
-            background-color: red;
+            background-color : currentColor;
             width: 5%;
             height: 50px;
             border-radius: 10px;
@@ -50,7 +50,10 @@
         <div class="main_body">
 
             <div class="box"></div>
-            
+
+            {% for i in range(0,num):%}      
+                    <div class="box"></div>
+            {%endfor%}
         </div>
 
     </div>
