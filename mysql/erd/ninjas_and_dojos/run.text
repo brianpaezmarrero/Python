@@ -1,0 +1,47 @@
+INSERT INTO dojos (id,name, created_at, updated_at) VALUE (1,'Oregon Dojo', NOW(), NOW());
+INSERT INTO dojos (id, name, created_at, updated_at) VALUE (2,'California Dojo', NOW(), NOW());
+INSERT INTO dojos (id, name, created_at, updated_at) VALUE (3,'Florida Dojo', NOW(), NOW());
+
+SELECT *
+FROM dojos
+
+DELETE FROM dojos WHERE id = 1;
+DELETE FROM dojos WHERE id = 2;
+DELETE FROM dojos WHERE id = 3;
+
+SELECT * FROM dojos
+
+INSERT INTO dojos (id,name, created_at, updated_at) VALUE ('1','Oregon Dojo' ,NOW(), NOW());
+INSERT INTO dojos (id,name, created_at, updated_at) VALUE (2,'Seattle Dojo' ,NOW(), NOW());
+INSERT INTO dojos (id,name, created_at, updated_at) VALUE (3,'Washington Dojo' ,NOW(), NOW());
+
+
+INSERT INTO ninjas (id,dojo_id,first_name,last_name,created_at,updated_at) VALUE (1,1,'Brian', 'Paez', NOW(),NOW());
+INSERT INTO ninjas (id,dojo_id,first_name,last_name,created_at,updated_at) VALUE (2,1,'Lisset', 'Marrero', NOW(),NOW());
+INSERT INTO ninjas (id,dojo_id,first_name,last_name,created_at,updated_at) VALUE (3,1,'Nancy', 'Hernandez', NOW(),NOW());
+
+SELECT * FROM ninjas
+
+-- INSERT INTO ninjas (id,dojo_id,first_name,last_name,created_at,updated_at) VALUE (1,1,'Brian', 'Paez', NOW(),NOW());
+-- INSERT INTO ninjas (id,dojo_id,first_name,last_name,created_at,updated_at) VALUE (2,1,'Lisset', 'Marrero', NOW(),NOW());
+-- INSERT INTO ninjas (id,dojo_id,first_name,last_name,created_at,updated_at) VALUE (3,1,'Nancy', 'Hernandez', NOW(),NOW());
+
+SELECT * FROM ninjas
+
+INSERT INTO ninjas (id,dojo_id,first_name,last_name,created_at,updated_at) VALUE (7,3,'Doris', 'Perez', NOW(),NOW());
+INSERT INTO ninjas (id,dojo_id,first_name,last_name,created_at,updated_at) VALUE (8,3,'Rene', 'Martinez', NOW(),NOW());
+INSERT INTO ninjas (id,dojo_id,first_name,last_name,created_at,updated_at) VALUE (9,3,'Ernesto', 'Martinez', NOW(),NOW());
+
+SELECT * FROM ninjas
+
+
+SELECT *
+FROM ninjas
+WHERE dojo_id = 1
+
+SELECT *
+FROM ninjas
+WHERE dojo_id = 3
+
+SELECT * FROM dojos
+WHERE id = 3
