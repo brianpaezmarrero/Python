@@ -1,0 +1,53 @@
+{%block head%}
+<link rel="stylesheet" href="{{url_for('static',filename = 'css/style.css')}}">
+
+{%endblock%}
+
+{%block body%}
+<div class="container">
+
+    <div class="send_card">
+        <h1>Submitted Info</h1>
+        <div class="sended">
+
+            <div class="sended_name">
+                
+                <div class="info_name">
+                <h2>Name: </h2>
+                </div>
+                
+                <div class="info_location">
+                    <h2>User Location: </h2>
+                </div>
+                
+                <div class="info_fav_lng">
+                    <h2>User Favorite Language: </h2>
+                </div>
+                
+                <div class="info_content">
+                    <h2>Content: </h2>
+                </div>
+            </div>
+
+            <div class="sended_name">
+
+                <div class="info_given">
+                    <h2>{{session['name']}}</h2>
+                </div>
+
+                <div class="info_given">
+                    <h2>{{session['location']}}</h2>
+                </div>
+
+                <div class="info_given">
+                    <h2>{{session['fav_lng']}}</h2>
+                </div>
+
+                <div class="info_given">
+                    <p>{{session['info']}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{%endblock%}
