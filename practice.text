@@ -1,0 +1,31 @@
+SELECT clients.first_name, clients.last_name, billing.amount, billing.charged_datetime
+from clients
+join billing on clients.id = billing.clients_id;
+
+select clients.first_name AS clients_first, clients.last_name, sites.domain_name, leads.first_name
+from clients
+join sites on clients.id = sites.clients_id
+join leads on sites.id = leads.sites_id;
+
+select group_concat(sites.domain_name) as domain, clients.first_name, clients.last_name
+from clients
+left join sites on clients.id  = sites.clients_id;
+
+
+select group_concat( sites.domain_name) as domain, clients.first_name, clients.last_name
+from clients
+join sites on clients.id = sites.clients_id
+group by clients.id
+
+
+select * from billing
+join clients on billing.clients_id = clients_id 
+order by clients.id;
+
+select *from billing join clients on billing.clients_id = clients.id group by clients.id;
+
+select sum(amount), clients.id, clients.first_name,clients.last_name,clients.email from billing
+
+
+
+

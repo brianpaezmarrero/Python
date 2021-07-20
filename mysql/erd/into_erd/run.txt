@@ -1,0 +1,28 @@
+SELECT *
+FROM users
+
+-- added the users by inserting it into 
+-- the table displayed inside the result grid
+
+SELECT * 
+FROM users
+
+--this way i displayed all the users inside the users-table
+
+SELECT email
+FROM users
+ORDER BY email
+
+SELECT *
+FROM users
+WHERE id = 3;
+
+
+DELETE FROM users WHERE id = 2;
+
+SELECT first_name
+FROM users;
+
+SELECT *
+FROM users
+order by last_name DESC
