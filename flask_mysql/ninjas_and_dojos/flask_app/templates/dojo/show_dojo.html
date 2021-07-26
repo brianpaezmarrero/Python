@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Dojo</title>
+</head>
+<body>
+    <h1>Dojo {{dojo.id}}</h1>
+    <div class="dojo">
+        <p><span style="font-weight: bolder; font-size: x-large;">Dojo Name:</span> {{dojo.name}}</p>
+        {%for ninja in dojo.ninjas:%}
+            {%if ninja.id == None:%}
+                <p>No Ninjas In the Dojo</p>
+                {%else:%}
+                    <li>Ninja's First Name:   {{ninja.first_name}}</li>
+                    <li>Ninja's Last Name:   {{ninja.last_name}}</li>
+                    <li>Ninja's Age:   {{ninja.age}}</li>
+                    <li>Joined:   {{ninja.created_at}}</li>
+            {%endif%}
+        {%endfor%}
+    </div>
+    <a href="/">Home</a>
+</body>
+</html>

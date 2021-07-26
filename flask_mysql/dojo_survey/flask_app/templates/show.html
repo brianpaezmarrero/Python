@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static',filename = 'css/style.css')}}">
+</head>
+<body>
+    <div class="container">
+
+        <div class="send_card">
+            <h1>Submitted Info</h1>
+            <div class="sended">
+                <table>
+                    <div class="sended_name">
+                    
+                        <td class="info_name"><h2>ID: </h2></td>
+
+                        <td class="info_name"><h2>Name: </h2></td>
+                        
+                        <td class="info_location"><h2>User Location: </h2></td>
+                        
+                        <td class="info_fav_lng"><h2>User Favorite Language: </h2></td>
+                        
+                        <td class="info_content"><h2>Content: </h2></td>
+
+                        <td class="info_content"><h2>Actions: </h2></td>
+                    </div>
+    
+                    <div class="sended_name">
+                        <tbody class="info_given">
+                            {%for dojo in all_dojos:%}
+                                <tr>
+                                    <td>{{dojo.id}}</td>
+                                    <td>{{dojo.name}}</td>
+                                    <td>{{dojo.location}}</td>
+                                    <td>{{dojo.language}}</td>
+                                    <td>{{dojo.comment}}</td>
+                                    <td>
+                                        <a href="/"></a>Home
+                                    </td>
+                                </tr>
+                            {%endfor%}
+                        </tbody>
+                    </div>
+                </table>
+            </div>
+        </div>
+    </div>
+    <a href="/">Home</a>
+</body>
+</html>

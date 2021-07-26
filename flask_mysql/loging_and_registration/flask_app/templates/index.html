@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+    <h1>Create Account</h1>
+    <form action="/user/create" method="post">  
+        <p>
+            First Name:
+            <input type="text" name="first_name" id="">
+        </p>
+        <p>
+            Last Name:
+            <input type="text" name="last_name" id="">
+        </p>
+        <p>
+            Email:
+            <input type="email" name="email" id="">
+        </p>
+        <p>
+            Password:
+            <input type="password" name="password" id="">
+        </p>
+        <p>
+            Repeat Password:
+            <input type="password" name="confirm_password" id="">
+        </p>
+        <button>Create User</button>
+        {%with messages = get_flashed_messages()%}
+            {%if messages%}
+                {%for message in messages%}
+                    <p style="color: red;">{{message}}</p>
+                {%endfor%}
+            {%endif%}
+        {%endwith%}
+    </form>
+
+    <h1>Log In</h1>
+    <form action="/user/login" method="post">
+        <p>
+            Email:
+            <input type="email" name="email" id="">
+        </p>
+        <p>
+            Password:
+            <input type="password" name="password" id="">
+        </p>
+        <button>Log IN</button>
+    </form>
+    <a href="/show/all">Show All Users</a>
+</body>
+</html>

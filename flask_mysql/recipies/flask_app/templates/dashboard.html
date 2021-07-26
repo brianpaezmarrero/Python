@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard</title>
+</head>
+<body>
+    <h1>Welcome {{user.first_name}}</h1>
+    <h3>these are the recipes</h3>
+    <a href="/create">Create</a>
+    <a href="/user/logout">Log Out</a>
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Under 30 min</th>
+            <th>Actions</th>
+        </thead>
+        <tbody>
+            {%for recipe in all_recipes%}
+                <tr>
+                    <td>{{recipe.name}}</td>
+                    <td>{{recipe.time}}</td>
+                    <td>
+                        <a href="#"></a>
+                        <a href="#"></a>
+                        <a href="#"></a>
+                    </td>
+                </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+</head>
+<body>
+    <div class="dojos">
+
+        <h1>All Dojos</h1>
+        <table>
+            <thead>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Created On</th>
+                <th>Actions</th>
+            </thead>
+            <tbody>
+                {%for dojo in all_dojos:%}
+                    <tr>
+                        <td>{{dojo.id}}</td>
+                        <td>{{dojo.name}}</td>
+                        <td>{{dojo.created_at}}</td>
+                        <td>
+                            <a href="/dojo/{{dojo.id}}">Show</a>
+                            <a href="/dojo/{{dojo.id}}/edit">Edit</a>
+                            <a href="/dojo/{{dojo.id}}/destroy">Delete</a>
+                        </td>
+                    </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+    <a href="/ninja/show">Show Ninjas</a>
+    <a href="/dojo/new">Create a Dojo</a>
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static',filename = 'css/style.css')}}">
+</head>
+<body>
+    <h1>Hello World</h1>
+    <div class="container">
+
+        <div class="form_card">    
+            <form action="/create" method="post">
+                <h1>Dojo Survey</h1>
+                <div class="name">
+                    
+                    <p>name</p>
+                    <input type="text" name="name" placeholder="Name">
+                </div>
+                <div class="location">
+                    
+                    <p>Location</p>    
+                    <select name="location">
+                        <option value="N/A"></option>
+                        <option value="Oregon">OR</option>
+                        <option value="Los Angeles">LA</option>
+                    </select>
+                    
+                </div>
+                
+                <div class="favorite_lng">
+                    <p>Favorite Language</p>    
+                    <select name="language">
+                        <option value="N/A"></option>
+                        <option value="Python">Py</option>
+                        <option value="Java Script">JS</option>
+                    </select>
+                </div>
+                <div class="subbmit">
+                    <textarea name="comment" cols="50" rows="5"></textarea>
+                </div>
+                <input type="submit" value="SEND">
+            </form>
+            {%with messages = get_flashed_messages()%}
+                {%if messages%}
+                    {%for message in messages%}
+                        <p style="color: red;">{{message}}</p>
+                    {%endfor%}
+                {%endif%}
+            {%endwith%}
+        </div>
+    </div>
+</body>
+</html>
