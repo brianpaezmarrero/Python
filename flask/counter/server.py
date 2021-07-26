@@ -5,9 +5,14 @@ app.secret_key = "keep it secret, keep it safe."
 
 @app.route("/")
 def index():
-    session['counter'] = request.form['count']
+
+    session['counter'] = 1
+
     if 'counter' in session:
-        print(session['counter'])
+        print('counter is in session')
+    else:
+        print('counter not in session')
+
     return render_template("index.html")
 
 
